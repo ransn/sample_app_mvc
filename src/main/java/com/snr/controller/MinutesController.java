@@ -19,7 +19,16 @@ public class MinutesController {
 	@RequestMapping(value="/addMinutes")
 	public String addMinutes(@ModelAttribute("exercise") Exercise exercise){
 		System.out.println("exercise:"+ exercise.getMinutes());
+		//return "forward:addMoreMinutes.html"; This is forward chaining
+		//return "redirect:addMoreMinutes.html"; // This is redirect chaining, in this values will be reset
 		return "addMinutes";
-	}
+ 	}
+	
+	/*
+	 * @RequestMapping(value="/addMoreMinutes") public String
+	 * addMoreMinutes(@ModelAttribute("exercise") Exercise exercise){
+	 * System.out.println("exercising:"+ exercise.getMinutes()); return
+	 * "addMinutes"; }
+	 */
 	
 }

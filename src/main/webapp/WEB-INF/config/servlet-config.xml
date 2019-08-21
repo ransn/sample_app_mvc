@@ -10,6 +10,8 @@
 
 	<mvc:annotation-driven />
 	
+	<mvc:resources location="pdfs" mapping="/pdfs/**"></mvc:resources>
+	
 	<context:component-scan base-package="com.snr.controller" />
 	
 	<!--  This is long hand
